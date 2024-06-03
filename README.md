@@ -4,6 +4,11 @@
 
 ![Screenshot](https://raw.githubusercontent.com/dracula/visual-studio-code/master/screenshot.png)
 
+## Custom
+This theme is a custom variant of the original Dracula Theme.
+Overall desaturation and interface harmonization for reducing eyes strain.
+The green and orange colors are more dissociable from the rest of the theme and more color-blind friendly.
+
 ## Install
 
 All instructions can be found at [draculatheme.com/visual-studio-code](https://draculatheme.com/visual-studio-code).

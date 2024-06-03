@@ -55,6 +55,21 @@ const transformSoft = theme => {
 };
 
 module.exports = async () => {
+    const customYamlFile = await readFile(
+        join(__dirname, '..', 'src', 'dracula-custom.yml'),
+        'utf-8'
+    );
+
+    /** @type {Theme} */
+    const custom = load(customYamlFile, { schema });
+
+    // Remove nulls and other falsey values from colors
+    for (const key of Object.keys(custom.colors)) {
+        if (!custom.colors[key]) {
+            delete custom.colors[key];
+        }
+    }
+
     const yamlFile = await readFile(
         join(__dirname, '..', 'src', 'dracula.yml'),
         'utf-8'
@@ -71,6 +86,7 @@ module.exports = async () => {
     }
 
     return {
+        custom,
         base,
         soft: transformSoft(base),
     };

@@ -51,6 +51,11 @@
     "contributes": {
         "themes": [
             {
+                "label": "Dracula Custom",
+                "uiTheme": "vs-dark",
+                "path": "./theme/dracula-custom.json"
+            },
+            {
                 "label": "Dracula",
                 "uiTheme": "vs-dark",
                 "path": "./theme/dracula.json"
